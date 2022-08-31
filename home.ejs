@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Surge is a discord bot with features to make your discord server better and more fun! Surge has many commands which are fun and cool in everyway. Invite Surge today!">
+    <meta itemprop="name" content="Surge">
+    <meta itemprop="description"
+        content="Surge is a discord bot with features to make your discord server better and more fun! Surge has many commands which are fun and cool in everyway. Invite Surge today!">
+    <meta itemprop="image" content="http://www.surge.ml/Assets/surge.png">
+    <meta property="og:url" content="https://www.surge.ml/home">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Surge">
+    <meta property="og:description"
+        content="Surge is a discord bot with features to make your discord server better and more fun! Surge has many commands which are fun and cool in everyway. Invite Surge today!">
+    <meta property="og:image" content="https://www.surge.ml/Assets/surge.png">
+    <meta name="theme-color" content="#BD910D">
+    <title>Surge - Home</title>
+    <link rel="icon" href="Assets/surge.png" type="image/x-icon">
+    <link rel="stylesheet" href="Styles/style.css" type="text/css">
+    <script src="https://kit.fontawesome.com/cbfeeacc66.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Preloader start -->
+    <div class="preloader" id="preloader">
+        <img src="Assets/surge.png" alt="Preloader logo" />
+        <img src="Assets/text.svg" alt="Preloader text" />
+    </div>
+    <!-- Preloader end -->
+    <!-- Navbar start -->
+    <nav>
+        <div class="logo">Surge</div>
+        <input type="checkbox" id="click">
+        <label for="click" class="menu-btn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <ul>
+            <li><a href="home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="/invite" target="_blank">Invite</a></li>
+            <li><a href="/discord" target="_blank">Discord</a></li>
+            <li><a href="/vote" target="_blank">Vote</a></li>
+            <% if(!user) { %>
+                <li><a href="/login">Login</a></li>
+                <% } else { %>
+                    <li><a href="#"><%= user.username + "#" + user.discriminator %></a></li>
+                    <!-- <li><a><img src="https://cdn.discordapp.com/avatars/<%= user.id %>/<%= user.avatar %>.webp?size=32" /></a></li>  -->
+                    <% } %>
+        </ul>
+    </nav>
+    <!-- Navbar end -->
+    <!-- Home start -->
+    <section class="home">
+        <div class="image">
+            <img src="Assets/surge.png" alt="Logo" />
+        </div>
+        <div class="content">
+            <h3 id="welcome-text">Surge - The only bot you <a style="color: #BD910D;">need!</a></h3>
+            <p>Bored of bugs and errors? Try something better!</p>
+            <a href="/invite"><button id="button">Invite Surge!</button></a>
+        </div>
+    </section>
+    <!-- Home end -->
+    <!-- About start -->
+    <section class="about" id="about">
+        <div class="content">
+            <h3>What is <span>Surge!?</span></h3>
+            <p>Surge is a discord bot with features to make your discord server <a style="color: #BD910D;">better</a>
+                and more <a style="color: #BD910D;">fun</a>!<br>Surge has many commands which are <a
+                    style="color: #BD910D;">fun</a> and cool in everyway.<br>Invite <a style="color: #BD910D;">Surge</a>
+                today!<br><br>
+            <p>LSIS#2572 - Founder of Surge<br>Neutral#4231 - Developers of Surge</p>
+            <br>
+            <hr>
+        </div>
+        <div class="image">
+            <img src="Assets/adn.png" alt="Logo" />
+        </div>
+    </section>
+    <!-- About end -->
+    <!-- Footer start -->
+    <footer>
+        <p>Copyright &copy; 2022 Surge. All Rights Reserved.</p>
+    </footer>
+    <!-- Footer end -->
+
+    <script src="Scripts/script.js" type="application/javascript"></script>
+</body>
+
+</html>
